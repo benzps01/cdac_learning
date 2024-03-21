@@ -1,0 +1,8 @@
+########
+Pointers
+########
+
+int* p = &q
+
+in ptrs p[0] = 35 can also be done as *p = 35;
+but other memory location can be accessed using p[1] or p[-1] or p[2];

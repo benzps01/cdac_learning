@@ -6,3 +6,26 @@ int* p = &q
 
 in ptrs p[0] = 35 can also be done as *p = 35;
 but other memory location can be accessed using p[1] or p[-1] or p[2];
+
+
+eg:						
+						This is declaring pointer
+double Average(double first, double second, double* deviation)
+{
+	//assigning value at [0] where the pointer is pointing
+
+        deviation[0] = first > second ? (first - second) / 2 : (second - first) / 2;
+
+		//or
+
+	*deviation = first > second ? (first - second) / 2 : (second - first) / 2;
+
+        return (first + second) / 2;
+}
+		//here in &d we are asking deviation to store value at memory location of %d;
+ a = Average(b, c, &d);
+        printf("Average is %lf with a deviation of %lf\n",a, d);
+
+
+Mangled Name for pointers are _Z7AverageddPd  -> if pointers datatype are double then mangled name contains Pd for pointer.
+

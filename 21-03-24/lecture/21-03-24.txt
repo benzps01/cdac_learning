@@ -1,0 +1,30 @@
+# Function Overloading -> defining a function whose name matches with the name of an existing function but with a different list of parameter types;
+
+# Technique -> Name Mangling;
+
+## But in assembly language function names are labels, and assembly language doesn't allow 2 same labels. 
+So it creates a new name starting with _Z, then size of label i.e "compute" and the func name and then datatype of the arguments;
+
+eg. _Z7Computei; & _Z7Computeif -> these are called mangled names in assembly language;
+
+########################################################################################################
+double kill(float, int) -> _Z4killfi
+				these creates an error, doesn't matter if it has different return type, 
+				it checks the different parameters list for function overloading
+				Parameters order can also create different names, (char, int) , (int,char);
+				These too creates different mangled names. But not recommended to do this.
+short kill(float, int) -> _Z4killfi
+#########################################################################################################
+
+## Function overloading checks for Parameters in the function and then return type.
+
+objdump -t a.out -> can checkout the mangled names of the functions by the compiler.
+
+now if a function is in another module, 
+extern "C" long GCD(long, long) -> "C" tells compiler that the function is not written in C, but it is compatible with CPP. The compiler understands that the function name is GCD and not mangled name.
+
+Func Overloading isn't in C, fortran languages
+
+this was introduced in CPP, Java, etc;
+
+Highlevel language always follows Calling Convention via the compiler;

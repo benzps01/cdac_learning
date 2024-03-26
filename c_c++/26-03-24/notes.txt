@@ -1,0 +1,14 @@
+#########
+26-03-24
+#########
+
+SOLID Principles
+
+1. Single Responsibility Principle (SRP): There should be exactly one reason for changing 
+					  the functionality supported by an object.
+
+---> Rule: Define members in class which are required by all of its instances in an identical manner.
+
+2. Open Closed Principle (OCP): The functionality exposed by an object should be open for extension but closed for modification.
+
+--> Rule: Use an instance of a class only by calling methods defined by that class. 

@@ -1,0 +1,26 @@
+27-03-24 CPP Notes
+
+Static method
+Whenever we find any methods which does not depend on instance of a class, we use static keyword.
+
+Static member function is independent of instance data and such a method does not require 'this' argument and it can be called directly on the class (using :: operator)
+
+Non-static member function depends on instance data which it addresses using 'this' argument, such a method must be called on an object (using . operator)
+
+Banner b; -> b will be allocated to stack memory
+
+ulimit -s -> gives the memory allocated for the program.
+stack memory is small. Good for small objects, but not for large ones.
+
+"new" operator makes a space on the heap memory for the object;
+eg: 
+banner* b = new Banner(20, 1);
+
+new operator dynamically allocates memory for an instance on the heap and returns the address of this instance. Such an instance must be explicitly deactivated using delete operator.
+Here address of b will be allocated in the stack, but data will be on heap.
+
+
+Banner a; Here data and address will be on stack;
+
+automatically allocating memory for an instance on stack; such an instance will be automatically deactivated when its identifier goes out of scope;
+

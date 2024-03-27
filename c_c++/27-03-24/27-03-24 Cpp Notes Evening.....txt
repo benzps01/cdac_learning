@@ -1,0 +1,22 @@
+27-03-24 Cpp Notes Evening....
+
+void increment(long* count){
+	*count += 1;
+}
+
+void increment2(long& count){
+	count += 1;
+}
+
+int main(void){
+	long n = 10;
+	//increment1(&n);
+	increment2(n);
+}
+
+here long& is basically references the values just like pointers. The compilers automatically does it for us. Automatic indirection happens. No need to specify & or anything. References contains address of only 1 data.
+
+But references cannot move around the data i.e. count[1].Price() or count[2].Price()
+
+Pointers can move around the data.
+

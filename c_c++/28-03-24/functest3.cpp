@@ -3,6 +3,9 @@
 
 double Buy(const Banner& info, int copies){ 
 	float discount = Banner::BulkDiscount(copies); 
+	//dynamic binding: A call to a virtual member function on a
+	//pointer/refernece is indirectedthrough the v-table pointed
+	//by the instance addressed by that pointer/reference.
 	return (1 - discount / 100) * copies * info.Price();
 }
 

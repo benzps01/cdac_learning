@@ -41,8 +41,15 @@ SOLID Principles
    	be open for extension but closed for modification.
    	Rule: Use a class only by calling methods defined by that class on its
    	instances.
-3. Liskov's Substitution Principle (LSP): An object of a sub-type should be 	acceptable where ever an object of the original type is required.
-	Rule: Define members only required by some objects of a class within the 	subclass of that class.					
+
+3. Liskov's Substitution Principle (LSP): An object of a sub-type should be acceptable where ever an object of the original type is required.
+	Rule: Define members only required by some objects of a class within the subclass of that class.	
+
+4. Interface Seggregation Principle (ISP): The consumer of an object should not be forced to depend on an interface of that object which it does not require.
+	Rule: Define classes with common methods as subclasses of an abstract type in  which those methods are pure.
+
+5. Dependency Inversion Principle (DIP): An object should be consumed through its inteface and not through its implementation.
+	Rule: Use a class that inherits from an abstract type only for indirectly activating instances for that abstract type.			
  
 bool is also a type of predefined Enum. It gives us options.
 Enum is a type of datatype which can utilize muliple options

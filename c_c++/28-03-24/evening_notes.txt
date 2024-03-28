@@ -1,0 +1,11 @@
+##########################
+28-03-24 CPP Notes Evening
+##########################
+
+Dynamic binding: A call to a virtual member function on a pointer/refernece is indirectedthrough the v-table pointed by the addressed instance.
+
+In CPP Dynamic Binding can only work with Virtual methods.
+
+https://godbolt.org -> site to see normal cpp code to assembly language.
+
+Object oriented Programming: It is an paradigm (approach) for implementing complex software applications using data abstraction and polymorphic subtyping according to SOLID principles.

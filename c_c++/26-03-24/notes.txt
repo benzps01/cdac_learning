@@ -33,14 +33,16 @@ behaviour of the that object. It provides support for following mechanisms
 SOLID Principles
 
 1. Single Responsibility Principle (SRP): There should be exactly one reason 
-   for changing the functionality supported by an object.
-   Rule: Define only members in a class which are required by all of its 
-   instances in an identical manner.
+   	for changing the functionality supported by an object.
+   	Rule: Define only members in a class which are required by all of its 
+   	instances in an identical manner.
 
 2. Open Closed Principle (OCP): The functionality exposed by an object should
-   be open for extension but closed for modification.
-   Rule: Use a class only by calling methods defined by that class on its
-   instances.
+   	be open for extension but closed for modification.
+   	Rule: Use a class only by calling methods defined by that class on its
+   	instances.
+3. Liskov's Substitution Principle (LSP): An object of a sub-type should be 	acceptable where ever an object of the original type is required.
+	Rule: Define members only required by some objects of a class within the 	subclass of that class.					
  
 bool is also a type of predefined Enum. It gives us options.
 Enum is a type of datatype which can utilize muliple options
@@ -71,3 +73,5 @@ instead
 	Banner a;
 		Buy(&a, count);
 }
+
+

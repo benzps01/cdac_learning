@@ -1,0 +1,27 @@
+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 token
+
+******************
+28-03-24 CPP Notes
+******************
+
+"Single Responsibility" tells class must take single responsibility, 
+it must not take responsibility for something which doesn't apply 
+to all instances. You can create another class for that 
+requirement and extend the earlier class to this class.
+
+Subclass is written instead of a regular class so that the earlier class members don't have to be written again.
+
+Subtype Polymorphism -> It is a modularization methodology based upon data abstraction for enabling same operation to be performed on muliple(poly) forms (morps) of objects which share some common behaviour.
+
+- A subclass supports inheritance (automatic availability) of members defined by an existing (base or super) class with ability to override (provide new implementations for) the methods it inherits.
+- It provides support for
+	1. Dispatch - When a method defined by a class is called on an object that refers to an instance of its subclass which has overridden this method then the call is forwarded to the implementation provided by the subclass.
+
+
+
+
+
+
+
+
+

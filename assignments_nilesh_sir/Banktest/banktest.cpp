@@ -60,9 +60,9 @@ void BankingSystem(Loan *loan, int c, int data[][2])
              << loan[i].GetPeriod() << "   years " << "\twith rate at\t" << loan[i].GetRate() << "%." << endl;
         // Here we calculate totalEMI and totalPrinciple
         // by passing function Pointer.
-        // totalEMI = CalcValue(loan[i], c, &Loan::GetEMI);
-        totalEMI = loan[i].GetEMI();
-        // totalPrinciple = CalcValue(loan[i], c, &Loan::GetPrinciple);
+        totalEMI = CalcValue(loan, c, &Loan::GetEMI);
+        // totalEMI = loan[i].GetEMI();
+        totalPrinciple = CalcValue(loan, c, &Loan::GetPrinciple);
     }
     // totalEMI = CalcValue(loan, c, &Loan::GetEMI);
     // totalPrinciple = CalcValue(loan, c, &Loan::GetPrinciple);
@@ -73,6 +73,7 @@ void BankingSystem(Loan *loan, int c, int data[][2])
     cout << fixed;
     cout << setprecision(2);
     cout << totalPrinciple << endl;
+    cout << "*************** Total Discount ******************" << endl;
 }
 
 int main(void)

@@ -43,10 +43,20 @@ namespace bank
     class HomeLoan : public Loan
     {
     public:
-        float rate = GetPrinciple() <= 2000000 ? 0.10 : 0.11;
+        // HomeLoan() : limit(25000)
+        // {
+        // }
+        // float rate = GetPrinciple() <= 2000000 ? 0.10 : 0.11;
         float GetRate()
         {
-            return rate;
+            if (GetPrinciple() >= 2500000)
+            {
+                return GetPrinciple() <= 2000000 ? 0.11 : 0.12;
+            }
+            return GetPrinciple() <= 2000000 ? 0.10 : 0.11;
         }
+
+    private:
+        double limit;
     };
 }

@@ -1,8 +1,8 @@
 public class MathUtil {
 
-    int count = 0;
+    static int count = 0;
 
-    public int countPrime(int n1, int n2) {
+    public static int countPrime(int n1, int n2) {
         for (int i = n1; i < n2; i++) {
             if (isPrime(i)) {
                 count++;
@@ -11,7 +11,7 @@ public class MathUtil {
         return count;
     }
 
-    public boolean isPrime(int num) {
+    public static boolean isPrime(int num) {
         if (num == 0 || num == 1) {
             return false;
         }
@@ -29,15 +29,15 @@ public class MathUtil {
         return true;
     }
 
-    public int add(int n1, int n2) {
+    public static int add(int n1, int n2) {
         return n1 + n2;
     }
 
-    public int subtract(int n1, int n2) {
+    public static int subtract(int n1, int n2) {
         return n1 - n2;
     }
 
-    public int multiply(int n1, int n2) {
+    public static int multiply(int n1, int n2) {
         return n1 * n2;
     }
 }

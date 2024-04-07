@@ -30,6 +30,19 @@ namespace bank
         double principle;
         float period;
     };
+
+    class Taxable
+    {
+    public:
+        virtual double getTax() = 0;
+    };
+
+    class Discountable
+    {
+    public:
+        virtual double getDiscount() = 0;
+    };
+
     class PersonalLoan : public Loan, public Taxable
     {
     public:
@@ -41,9 +54,9 @@ namespace bank
 
         double getTax()
         {
-            if (GetEMI() > 7000)
+            if (GetEMI() > 800)
             {
-                return GetEMI() - (GetEMI() * 0.12);
+                return GetEMI() * 0.05;
             }
             return 0;
         }
@@ -51,9 +64,8 @@ namespace bank
     class HomeLoan : public Loan, public Discountable
     {
     public:
-        HomeLoan()
+        HomeLoan() : limit(250000.0)
         {
-            limit = 2500000;
         }
         float GetRate()
         {
@@ -66,9 +78,9 @@ namespace bank
 
         double getDiscount()
         {
-            if (GetEMI() > 10000)
+            if (GetEMI() > 700)
             {
-                return GetEMI() - (GetEMI() * 0.05);
+                return GetEMI() * 0.05;
             }
             return 0;
         }
@@ -77,13 +89,4 @@ namespace bank
         float limit;
     };
 
-    class Taxable
-    {
-        virtual double getTax() = 0;
-    };
-
-    class Discountable
-    {
-        virtual double getDiscount() = 0;
-    };
 }

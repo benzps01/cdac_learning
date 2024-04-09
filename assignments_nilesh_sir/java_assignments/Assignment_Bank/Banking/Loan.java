@@ -8,8 +8,8 @@ public abstract class Loan {
         return principle;
     }
 
-    public void setPrinciple(double princip) {
-        principle = princip;
+    public void setPrinciple(double amount) {
+        principle = amount;
     }
 
     public int getPeriod() {

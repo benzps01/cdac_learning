@@ -46,13 +46,13 @@
 ```
 
 ### Assignment_1 
-    This is on operations like CountPrimes, addition, subtraction, multiplication using `static methods and no fields`.
+This is on operations like CountPrimes, addition, subtraction, multiplication using `static methods and no fields`.
 
 ### Assignment_2 
-    This is on operations like CountPrimes, addition, subtraction, multiplication using non `static methods with non static fields`.
+This is on operations like CountPrimes, addition, subtraction, multiplication using non `static methods with non static fields`.
 
 ### Assignment_3 
-    This is on Hospital System. Here in this system we set PatientName, Bedtype, getTotalBill calculated from bed rate per day and no of days admitted, offer 5% discount to InHousePatient. 
+This is on Hospital System. Here in this system we set PatientName, Bedtype, getTotalBill calculated from bed rate per day and no of days admitted, offer 5% discount to InHousePatient. 
 We create a package `Hospital` which has following classes:
 
 ```
@@ -65,7 +65,7 @@ Hospital
 and `HospitalTest.java` is the main program.
 
 ### Assignment_Bank
-    This assignment is same as the one made in C++. Here we used SOLID principles and created a small bank system which grants HomeLoan and PersonalLoan, and calculates the InterestRates, EMI, etc for each loans.
+This assignment is same as the one made in C++. Here we used SOLID principles and created a small bank system which grants HomeLoan and PersonalLoan, and calculates the InterestRates, EMI, etc for each loans.
 
 ```
 Abstract Class
@@ -89,4 +89,4 @@ Interfaces
 ```
 
 ### Assignment_docs
-    This contains all the assignment document folder.
+This contains all the assignment document folder.

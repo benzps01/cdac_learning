@@ -21,11 +21,18 @@ class Program {
             System.out.println("Selected String value: " + ss);
             double sd = (double) select(s, 43.5, 32.6);
             System.out.println("Selected value: " + sd);
-
             // This will throw error since our generic method
             // accepts Objects(String, double, int, etc) as arguments
             // and returns same Object as values
-            // String s2 = (double)select(s, 42.4, 34.3);
+            // String s2 = (double)select(s, 54.3, 32.4);
+
+            /*
+             * Here (double) => casting select method to double.
+             * This will work if after calculation the value returned is double
+             * i.e. 34.3, for "Jack" this will throw ClassCastException.
+             */
+            double s2 = (double) select(s, "Jack", 34.3);
+            System.out.println(s2);
         }
     }
 }

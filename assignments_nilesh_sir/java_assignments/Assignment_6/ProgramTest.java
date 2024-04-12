@@ -22,9 +22,14 @@ public class ProgramTest {
             String methodName = Check.next();
             try {
                 Method test = t.getMethod(methodName, int.class, int.class);
+                LuxuryTax LuxTaxAnnotation = test.getAnnotation(LuxuryTax.class);
+                int tax = LuxTaxAnnotation != null ? LuxTaxAnnotation.value() : 0;
+                System.out.println("Tax: " + tax);
                 double cost = (double) test.invoke(tours, d, p);
                 double finalCost = TotalCost.totalCost(cost, d, p);
-                System.out.println("Total Cost for " + d + " for " + p + " persons are: " + finalCost);
+                double CostAfterTax = finalCost + (finalCost * tax / 100);
+                System.out
+                        .println("Total Cost for " + d + " for " + p + " persons are with Luxury Tax: " + CostAfterTax);
             } catch (NoSuchMethodException e) {
                 System.out.println("Method not found!!!");
             } catch (Exception e) {

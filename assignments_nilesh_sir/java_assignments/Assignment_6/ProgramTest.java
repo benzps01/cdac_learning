@@ -20,11 +20,11 @@ public class ProgramTest {
             System.out.println();
             System.out.println("Enter the Method to get PerDayRoomCost: ");
             String methodName = Check.next();
+            System.out.println();
             try {
                 Method test = t.getMethod(methodName, int.class, int.class);
                 LuxuryTax LuxTaxAnnotation = test.getAnnotation(LuxuryTax.class);
                 int tax = LuxTaxAnnotation != null ? LuxTaxAnnotation.value() : 0;
-                System.out.println("Tax: " + tax);
                 double cost = (double) test.invoke(tours, d, p);
                 double finalCost = TotalCost.totalCost(cost, d, p);
                 double CostAfterTax = finalCost + (finalCost * tax / 100);

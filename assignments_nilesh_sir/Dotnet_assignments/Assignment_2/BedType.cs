@@ -1,0 +1,4 @@
+enum BedType
+{
+    ECONOMICAL, SPECIAL, EXECUTIVE
+}
